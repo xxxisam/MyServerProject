@@ -1,24 +1,24 @@
 #include "Server.h"
 
 
-Server::Server(std::shared_ptr<boost::asio::io_context> io, const std::string& address, uint16_t port, ServerFileManager serverFileManager_)
+Server::Server(std::shared_ptr<boost::asio::io_context> io, const std::string& address, uint16_t port)
 	: io_(std::move(io)),
 	endpoint_(setEndpoint(address, port)),
 	acceptor_(*io_, endpoint_),
-	serverFileManager_("D:\Server")
+	fileManager(FileManager::getInstance())
 {
 
 }
 
 
-boost::asio::ip::tcp::endpoint Server::setEndpoint(const std::string_view endpointAdress, uint16_t port)
+boost::asio::ip::tcp::endpoint Server::setEndpoint(const std::string_view endpointAddress, uint16_t port)
 {
-	return boost::asio::ip::tcp::endpoint(boost::asio::ip::make_address(endpointAdress), port);
+	return boost::asio::ip::tcp::endpoint(boost::asio::ip::make_address(endpointAddress), port);
 }
 
 void Server::setDefPath(std::filesystem::path path)
 {
-	serverFileManager_.setDefaultPath(path);
+	fileManager.setDefFolder(path);
 }
 
 
