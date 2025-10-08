@@ -38,10 +38,19 @@ void Server::newConnection()
 		if (!ec)
 		{
 			auto connect = std::make_shared<Connection>(std::move(*socket_));
-			self->connections_.push_back(connect);
+			self->connections.push_back(connect);
 			connect->getConnectionInfo();
 		}
 		self->newConnection();
 		}
 	);
+}
+
+void Server::addFileToServer()
+{
+	std::ofstream file();
+	std::vector<char> buffer(1024);
+	boost::system::error_code ec;
+
+	
 }
