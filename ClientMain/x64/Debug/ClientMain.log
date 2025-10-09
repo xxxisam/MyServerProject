@@ -3,7 +3,6 @@
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-  LINK : C:\Users\User\source\repos\MyServerProject\ServerMain\x64\Debug\ClientMain.exe not found or not built by the last incremental link; performing full link
   ClientMain.vcxproj -> C:\Users\User\source\repos\MyServerProject\ServerMain\x64\Debug\ClientMain.exe
   "pwsh.exe" не является внутренней или внешней
   командой, исполняемой программой или пакетным файлом.

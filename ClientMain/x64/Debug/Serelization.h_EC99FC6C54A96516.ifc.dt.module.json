@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\Serelization.obj",
+            "outputs": [
+                "x64\\Debug\\Serelization.h_EC99FC6C54A96516.ifc.dt.module.json",
+                "x64\\Debug\\Serelization.h_EC99FC6C54A96516.ifc.dt.d.json",
+                "x64\\Debug\\Serelization.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\User\\source\\repos\\MyServerProject\\ClientMain\\Serelization.h",
+                    "source-path": "c:\\users\\user\\source\\repos\\myserverproject\\clientmain\\serelization.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

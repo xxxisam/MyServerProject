@@ -1,4 +1,5 @@
 #include "Server.h"
+#include "Serelization.h"
 
 
 Server::Server(std::shared_ptr<boost::asio::io_context> io, const std::string& address, uint16_t port)
@@ -44,13 +45,4 @@ void Server::newConnection()
 		self->newConnection();
 		}
 	);
-}
-
-void Server::addFileToServer()
-{
-	std::ofstream file();
-	std::vector<char> buffer(1024);
-	boost::system::error_code ec;
-
-	
 }
